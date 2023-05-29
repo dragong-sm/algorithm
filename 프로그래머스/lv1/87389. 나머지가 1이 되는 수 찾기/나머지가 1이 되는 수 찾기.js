@@ -1,12 +1,11 @@
 function solution(n) {
-        
-    var arr = [];
+    var answer = [];
     
-    for(let i =1; i<n; i++){
-        if(n%i == 1){
-            arr.push(i);
+    for(let i=0; i<n; i++){
+        if(n%i === 1){
+            answer.push(i);
         }
     }
-    var answer = Math.min(...arr);
-    return answer;
+    
+    return answer[0];
 }
