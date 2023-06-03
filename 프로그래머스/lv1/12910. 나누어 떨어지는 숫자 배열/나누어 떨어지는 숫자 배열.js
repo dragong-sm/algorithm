@@ -1,29 +1,16 @@
 function solution(arr, divisor) {
     var answer = [];
     
-    arr.forEach((el) => {
-        if(el % divisor == 0){
+    arr.forEach(el => {
+        if(el % divisor === 0){
             answer.push(el);
         }
     })
     
-    answer.length < 1 ? answer.push(-1) : answer.sort((a,b) => a-b)
-    
-//     if(answer.length == 0){
-//         answer.push(-1);
-//     }else{
-//         for(let i = 0; i < answer.length; i++){
-//             for(let j = 0; j< answer.length; j++){
-//                 if(answer[i] < answer[j]){
-//                     const temp = answer[j];
-//                     answer[j] =  answer[i];
-//                     answer[i] = temp;
-//                 }
-//             }
-            
-//         }
-//     }    
-    
-    return answer;
+    if(answer.length > 0){
+        // 숫자를 정렬할 때, 정렬 순서를 정의하는 비교 함수를 인수로 전달 !
+        return answer.sort((a, b) => a - b);
+    }else{
+        return [-1];
+    }
 }
-
