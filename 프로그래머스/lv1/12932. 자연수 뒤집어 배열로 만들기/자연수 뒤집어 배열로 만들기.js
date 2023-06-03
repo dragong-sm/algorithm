@@ -1,8 +1,10 @@
 function solution(n) {
-    const arr = String(n).split("");
-    var answer =[];
-    for(let i=arr.length-1 ; i>=0; i--){
-        answer.push(parseInt(arr[i]));
-    }
+    let arr = n.toString().split("").reverse();
+    let answer = [];
+
+    arr.forEach(el => {
+        answer.push(parseInt(el));
+    })
+    
     return answer;
 }
