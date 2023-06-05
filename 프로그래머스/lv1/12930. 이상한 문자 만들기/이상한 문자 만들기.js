@@ -1,19 +1,18 @@
 function solution(s) {
-    var answer = []
-
-    s = s.split(" ");
+    const str = s.split(" ");
+    let arr = [];
     
-    s.forEach(word => {
-        word = word.split("");
-        for(let i=0; i< word.length; i++){
-            if(i % 2 == 0){
-                word[i] = word[i].toUpperCase();
+    str.forEach(el => {
+        let word = "";
+        for(let i = 1; i <= el.length; i++){
+            if(i % 2 !== 0){
+                word += el[i-1].toUpperCase();
             }else{
-                word[i] = word[i].toLowerCase();
+                word += el[i-1].toLowerCase();
             }
         }
-        answer.push(word.join(""));
+       arr.push(word);
     })
-    
-    return  answer.join(" ")
+
+    return arr.join(" ");
 }
