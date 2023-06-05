@@ -1,12 +1,11 @@
 function solution(arr) {
-    var answer = [-1];
+    const minIndex = arr.indexOf(Math.min(...arr));
+    arr.splice(minIndex, 1);
     
-    const index = arr.indexOf(Math.min(...arr));
-    arr.splice(index, 1);
-    
-    if(arr.length > 0){
-        answer = arr;
+    if(arr.length === 0){
+        return [-1];
+    }else{
+         return arr;
     }
 
-    return answer;
 }
